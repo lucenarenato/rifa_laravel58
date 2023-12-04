@@ -99,6 +99,8 @@
                                                         <a class="dropdown-item" href="javascript:void(0)" title="Ranking" onclick="openRanking('{{ $product->id }}')"><i class="fas fa-award"></i>&nbsp;Ranking</a>
                                                         <a class="dropdown-item" style="color: green" href="javascript:void(0)" title="Ranking" onclick="definirGanhador('{{ $product->id }}')"><i class="fas fa-check"></i>&nbsp;Definir Ganhador</a>
                                                         <a class="dropdown-item" href="javascript:void(0)" title="Ranking" onclick="verGanhadores('{{ $product->id }}')"><i class="fas fa-users"></i>&nbsp;Visualizar Ganhadores</a>
+                                                        <a class="dropdown-item" href="{{ route('numerosPremiados', $product->id) }}" target="_blank"><i class="fas fa-list-ol"></i>&nbsp;Números Premiados</a>
+                                                        <a class="dropdown-item" href="{{ route('viewBuscarNumero', $product->id) }}" target="_blank"><i class="fas fa-search"></i>&nbsp;Cota Premiada</a>
                                                     </div>
                                                     
                                                 </div>

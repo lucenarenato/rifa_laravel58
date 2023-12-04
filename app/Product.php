@@ -5,6 +5,7 @@ namespace App;
 use App\Models\DescricaoProduto;
 use App\Models\Participante;
 use App\Models\Raffle;
+use App\Models\NumerosPremiados;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -177,5 +178,10 @@ class Product extends Model
         else{
             return '';
         }
+    }
+
+    public function numerosPremiados()
+    {
+        return $this->hasMany(NumerosPremiados::class, 'product_id');
     }
 }   

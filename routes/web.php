@@ -131,6 +131,15 @@ Route::middleware(['check'])->group(function () {
 
         // Send MSG API Criar Whats
         Route::post('/api-wpp/send-message', 'MySweepstakesController@sendMessageAPIWhats')->name('apiWhats.sendMessage');
+
+        Route::get('numeros-premiados/{productId}', 'NumerosPremiadosController@numerosPremiados')->name('numerosPremiados');
+        Route::post('bloquear-numeros-premiados', 'NumerosPremiadosController@bloquearNumerosPremiados')->name('bloquearNumerosPremiados');
+        Route::post('liberar-numeros-premiados/{numeroPremiadoId}', 'NumerosPremiadosController@liberarNumerosPremiados')->name('liberarNumerosPremiados');
+        Route::delete('liberar-numeros-premiados/{numeroPremiadoId}', 'NumerosPremiadosController@excluirNumeroPremiado')->name('excluirNumeroPremiado');
+
+        Route::get('buscar-numero/{productId}', 'NumerosPremiadosController@viewBuscarNumero')->name('viewBuscarNumero');
+        Route::get('verificar-numero/{productId}', 'NumerosPremiadosController@verificarNumero')->name('verificarNumero');
+
     });
 
     Route::get('/pagar-reserva/{id}', 'CheckoutController@pagarReserva')->name('pagarReserva');
