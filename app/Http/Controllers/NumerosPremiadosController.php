@@ -57,7 +57,7 @@ class NumerosPremiadosController extends Controller
 
                 }
             }else{
-                return Redirect::back()->with("success", "Cota " . $request->search . " disponível");
+                return Redirect::back()->withErrors("Cota " . $request->search . " disponível teste");
 
             }
         }
