@@ -41,7 +41,10 @@ class NumerosPremiadosController extends Controller
         
         $listaNumeros = $resultadoBuscaNumero->numbers();
 
-        if (in_array((string)$request->search, $listaNumeros)) {
+        Log::info((string)$request->search);
+        Log::info($listaNumeros);
+
+        if (in_array((string)$request->search, $listaNumeros, true)) {
             return Redirect::back()->with("success", "Cota " . $request->search . " disponível");
 
         }else{
@@ -57,7 +60,7 @@ class NumerosPremiadosController extends Controller
 
                 }
             }else{
-                return Redirect::back()->withErrors("Cota " . $request->search . " disponível teste");
+                return Redirect::back()->withErrors("Cota " . $request->search . " não existe");
 
             }
         }
