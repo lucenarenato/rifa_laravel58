@@ -14,7 +14,7 @@ class CreateNumerosPremiadosTable extends Migration
     public function up()
     {
         Schema::create('numeros_premiados', function (Blueprint $table) {
-            $table->id();
+            $table->increments();
             $table->string('numero')->nullable();
             $table->integer('product_id')->nullable();
             $table->boolean('bloqueado')->nullable();
