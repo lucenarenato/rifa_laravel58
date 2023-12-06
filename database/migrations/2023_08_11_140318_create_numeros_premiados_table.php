@@ -23,9 +23,6 @@ class CreateNumerosPremiadosTable extends Migration
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
 
             $table->index('product_id');
-
-            $table->charset = 'utf8mb4';
-            $table->collation = 'utf8mb4_0900_ai_ci';
         });
     }
 
