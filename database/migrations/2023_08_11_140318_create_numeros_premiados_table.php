@@ -16,8 +16,8 @@ class CreateNumerosPremiadosTable extends Migration
         Schema::create('numeros_premiados', function (Blueprint $table) {
             $table->id();
             $table->string('numero')->nullable();
-            $table->unsignedBigInteger('product_id')->nullable();
-            $table->tinyInteger('bloqueado')->nullable();
+            $table->integer('product_id')->nullable();
+            $table->boolean('bloqueado')->nullable();
             $table->timestamps();
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
