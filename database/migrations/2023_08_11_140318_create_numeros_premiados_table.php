@@ -19,10 +19,6 @@ class CreateNumerosPremiadosTable extends Migration
             $table->integer('product_id')->nullable();
             $table->boolean('bloqueado')->nullable();
             $table->timestamps();
-
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-
-            $table->index('product_id');
         });
     }
 
