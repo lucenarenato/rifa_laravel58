@@ -41,18 +41,23 @@ class NumerosPremiadosController extends Controller
         
         $listaNumeros = $resultadoBuscaNumero->numbers();
 
-        if (in_array($request->search, $listaNumeros)) {
+        if (in_array((string)$request->search, $listaNumeros)) {
             return Redirect::back()->with("success", "Cota " . $request->search . " disponível");
 
         }else{
 
-            $participante = Participante::whereRaw('JSON_CONTAINS(numbers, ?)', ['"'. $request->search . '"'])->first();
+            $participante = Participante::whereRaw('JSON_CONTAINS(numbers, ?)', ['"'. $request->search . '"'])->where("product_id", "=", $productId)->first();
 
-            if ($participante->name == "bloqueador") {
-                return Redirect::back()->withErrors("Cota bloqueada");
+            if(isset($participante)){
+                if ($participante->name == "bloqueador") {
+                    return Redirect::back()->withErrors("Cota bloqueada");
 
+                }else{
+                    return Redirect::back()->withErrors("Cota já vendida para: " . $participante->name . " " . $participante->telephone);
+
+                }
             }else{
-                return Redirect::back()->withErrors("Cota já vendida para: " . $participante->name . " " . $participante->telephone);
+                return Redirect::back()->with("success", "Cota " . $request->search . " disponível");
 
             }
         }
