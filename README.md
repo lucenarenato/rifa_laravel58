@@ -4,17 +4,17 @@
 
 ## About
 
-<p align="center"><a href="public/images/1.png" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="public/images/1.png" target="_blank"><img src="public/images/1.png" width="400"></a></p>
 
-<p align="center"><a href="public/images/2.png" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="public/images/2.png" target="_blank"><img src="public/images/2.png" width="400"></a></p>
 
-<p align="center"><a href="public/images/3.png" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="public/images/3.png" target="_blank"><img src="public/images/3.png" width="400"></a></p>
 
-<p align="center"><a href="public/images/4.png" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="public/images/4.png" target="_blank"><img src="public/images/41.png" width="400"></a></p>
 
-<p align="center"><a href="public/images/5.png" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="public/images/5.png" target="_blank"><img src="public/images/5.png" width="400"></a></p>
 
-<p align="center"><a href="public/images/6.png" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="public/images/6.png" target="_blank"><img src="public/images/6.png" width="400"></a></p>
 
 ## License
 
