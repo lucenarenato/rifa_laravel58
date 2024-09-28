@@ -92,7 +92,7 @@
                         <img src="{{ asset('products/' . @$data['social']->logo) }}" alt="" width="100"
                             height="50">
                     @else
-                        HD Produtora
+                        RLucena
                     @endif
                 </a>
             </div>
@@ -245,7 +245,7 @@
                         style="font-size: 20px;"></i></a>
                 @if (env('FOOTER_CLIENTE'))
                     <br>
-                    <a href="https://apostanarifa.com.br/" target="_blank" style="text-decoration: none"><span class="text-muted" style="color: #fff!important; font-size: 12px;">Desenvolvido por HD PRODUTORA</span></a>
+                    <a href="https://apostanarifa.com.br/" target="_blank" style="text-decoration: none"><span class="text-muted" style="color: #fff!important; font-size: 12px;">Desenvolvido por RLucena</span></a>
                 @endif
             </div>
         </footer>
@@ -255,7 +255,7 @@
                 <span class="text-muted" style="color: #fff!important;">{{ @$data['social']->footer }}</span>
                 @if (env('FOOTER_CLIENTE'))
                     <br>
-                    <a href="https://apostanarifa.com.br/" target="_blank" style="text-decoration: none"><span class="text-muted" style="color: #fff!important; font-size: 12px;">Desenvolvido por HD PRODUTORA</span></a>
+                    <a href="https://apostanarifa.com.br/" target="_blank" style="text-decoration: none"><span class="text-muted" style="color: #fff!important; font-size: 12px;">Desenvolvido por RLucena</span></a>
                 @endif
             </div>
         </footer>

@@ -1,0 +1,67 @@
+version: "3.7"
+
+services:
+  site:
+    build: .deployment
+    container_name: rifa
+    ports:
+        - 80:80
+        - 443:443
+    tty: true
+    volumes:
+        - .:/var/www/html
+    depends_on:
+        - mysql
+    networks:
+      - sail
+
+  mysql:
+    container_name: "${APP_NAME}_MYSQL"
+    image: mysql:8.0.30-debian
+    command: --default-authentication-plugin=mysql_native_password
+        --max_connections=666
+        --bind-address=0.0.0.0
+        --transaction-isolation=READ-COMMITTED
+    environment:
+        MYSQL_ROOT_HOST: "%"
+        MYSQL_DATABASE: ${DB_DATABASE}
+        MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+        MYSQL_PASSWORD: ${DB_PASSWORD}
+        MYSQL_USER: ${DB_USERNAME}
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+        - sail-mysql:/var/lib/mysql
+        - "./create-database.sh:/docker-entrypoint-initdb.d/10-create-testing-database.sh"
+    cap_add:
+        - SYS_NICE  # CAP_SYS_NICE
+    security_opt:
+        - seccomp:unconfined
+    ports:
+        - "${FORWARD_DB_PORT:-3306}:3306"
+    networks:
+        - sail
+    healthcheck:
+        test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+        retries: 3
+        timeout: 5s
+
+  phpmyadmin:
+    container_name: "${APP_NAME}_PHPMYADMIN"
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - 8082:80
+    environment:
+        PMA_HOSTS: mysql
+        PMA_PORT: ${FORWARD_DB_PORT:-3306}
+        MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-userpass}
+        PMA_ARBITRARY: 1
+        UPLOAD_LIMIT: 350M
+    networks:
+        - sail
+networks:
+  sail:
+    driver: bridge
+
+volumes:
+    sail-mysql:
+        driver: local

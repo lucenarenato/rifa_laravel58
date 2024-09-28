@@ -50,7 +50,7 @@
                                 <img src="{{ asset('products/' . @$data['social']->logo) }}" alt=""
                                     width="100" height="50">
                             @else
-                                HD Produtora
+                                RLucena
                             @endif
                         </a>
                     </span>

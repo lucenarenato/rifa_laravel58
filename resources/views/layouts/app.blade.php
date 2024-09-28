@@ -222,7 +222,7 @@ $subDomain = explode('.', request()->getHost());
 
 
 <footer class="footer" style="text-align: center">
-    Desenvolvido por M 7 INTERMEDIACOES DIGITAIS LTDA 51.695.927/0001-24
+    Desenvolvido por RLucena Tecnologia 26.748.179/0001-53
 </footer>
 
 

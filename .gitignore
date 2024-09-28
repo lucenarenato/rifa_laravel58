@@ -12,3 +12,16 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/vendor
+/embranco
+*.zip
+/*.zip
+docker/logs/nginx/*.log
+/docker/logs/nginx/*.log
+docker/logs/nginx/laravel_access.log
+docker/certbot/logs
+composer.lock
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+/storage/debugbar/*

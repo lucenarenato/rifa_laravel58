@@ -15,8 +15,8 @@ class UserSeeder extends Seeder
     {
         $user1 = User::create([
             'name' => 'Rifa Online',
-            'email' => 'admin@gmail.com',
-            'telephone' => '6984465865',
+            'email' => 'admin@admin.com',
+            'telephone' => '62984306136',
             'status' => '1',
             'password' => bcrypt('admin123@@#'),
         ]);
